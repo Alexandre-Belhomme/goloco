@@ -1,6 +1,10 @@
 name: Build Release
 
-on: 
+on:
+  workflow_run:
+    workflows: [Check Latest Release from main repo]
+    types:
+      - completed
   workflow_dispatch:
 
 env:

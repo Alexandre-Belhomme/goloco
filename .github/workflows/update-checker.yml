@@ -1,0 +1,115 @@
+name: Check Latest Release from main repo
+
+on: 
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 0 * * *" # Daily scheduled run
+
+env:
+  TARGET_REPO_OWNER: "Franada"
+  TARGET_REPO_NAME: "gogoloco"
+
+jobs:
+  check-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history and tags
+
+      - name: Get the latest release tag from target repository
+        id: get-tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TARGET_LATEST_TAG=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/${{env.TARGET_REPO_OWNER}}/${{env.TARGET_REPO_NAME}}/releases/latest" | \
+            jq -r '.tag_name' | sed -E 's/^[^0-9]*([0-9]+\.[0-9]+\.[0-9]+).*$/\1/')
+          echo "Latest release tag in target repository: $TARGET_LATEST_TAG"
+          echo "TARGET_LATEST_TAG=${TARGET_LATEST_TAG}" >> $GITHUB_OUTPUT
+
+      - name: Check if the tag exists in your repository
+        id: check-if-tag-exists
+        run: |
+          TARGET_LATEST_TAG=${{ steps.get-tag.outputs.TARGET_LATEST_TAG }}
+          LOCAL_TAG_BASED_ON_LATEST_TARGET=$(git tag -l "$TARGET_LATEST_TAG")
+          if [[ -n "$LOCAL_TAG_BASED_ON_LATEST_TARGET" ]]; then
+            echo "Tag $TARGET_LATEST_TAG exists in the local project."
+            echo "TARGET_TAG_EXISTS=true" >> $GITHUB_OUTPUT
+          else
+            echo "Tag $TARGET_LATEST_TAG does not exist in the local project."
+            # You can add additional steps or logic here if needed.
+            echo "TARGET_TAG_EXISTS=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Extract remote release
+        if: steps.check-if-tag-exists.outputs.TARGET_TAG_EXISTS == 'false'
+        run: |
+          TARGET_LATEST_TAG=${{ steps.get-tag.outputs.TARGET_LATEST_TAG }}
+          ASSET_NAME="GoLoco.v.$TARGET_LATEST_TAG.zip"
+          ROOT_DIR=$(pwd)
+          echo "Extracting remote release tag $TARGET_LATEST_TAG"
+          curl -L -o $ASSET_NAME \
+            "https://github.com/${{env.TARGET_REPO_OWNER}}/${{env.TARGET_REPO_NAME}}/releases/download/goloco.$TARGET_LATEST_TAG/$ASSET_NAME"
+          ls
+          unzip $ASSET_NAME -d extracted
+          rm $ASSET_NAME
+          cd extracted/GoLoco.v.$TARGET_LATEST_TAG
+          ls
+          mkdir extracted
+          tar -xzf GoLoco.v.$TARGET_LATEST_TAG.unitypackage -C extracted
+
+          # echo "Apply extracted data to project"
+          for file in extracted/*; do
+            if [[ -d "$file" ]]; then
+              # echo file $file
+              UNITY_FILE_PATH=$(cat $file/pathname)
+              # echo UNITY_FILE_PATH "$UNITY_FILE_PATH"
+              UNITY_FILE_DIR=$(dirname "$UNITY_FILE_PATH")
+              # echo UNITY_FILE_DIR "$UNITY_FILE_DIR"
+              mkdir -p "$ROOT_DIR/$UNITY_FILE_DIR"
+              # dir $file
+              if [ -e $file/asset ]; then
+                cp "$file/asset" "$ROOT_DIR/$UNITY_FILE_PATH"
+              fi
+              cp "$file/asset.meta" "$ROOT_DIR/$UNITY_FILE_PATH.meta"
+            fi
+          done
+          echo "Apply done"
+          echo go back root $ROOT_DIR
+          cd $ROOT_DIR
+
+      - name: Move extracted data to Package
+        if: steps.check-if-tag-exists.outputs.TARGET_TAG_EXISTS == 'false'
+        run: |
+          ls
+          TARGET_FOLDER="Packages/gogoloco"
+          echo "Moving extracted data to $TARGET_FOLDER"
+          mkdir -p "$TARGET_FOLDER"
+          rsync -av --remove-source-files "Assets/GoGo/" "$TARGET_FOLDER/Runtime"
+          rm -rf Assets/GoGo
+          rm Assets/GoGo.meta
+          rm -rf extracted
+          echo "move done"
+          # Print tree
+          find . -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"
+
+      - name: Bump version of unity package
+        if: steps.check-if-tag-exists.outputs.TARGET_TAG_EXISTS == 'false'
+        run: |
+          TARGET_FOLDER="Packages/gogoloco"
+          echo "Bumping version of unity package to ${{ steps.get-tag.outputs.TARGET_LATEST_TAG }}"
+          sed -i "s/  \"version\": \"[0-9]\+\.[0-9]\+\.[0-9]\+\"/  \"version\": \"${{ steps.get-tag.outputs.TARGET_LATEST_TAG }}\"/g" "$TARGET_FOLDER/package.json"
+          echo "Bump done"
+
+      - name: Commit changes
+        if: steps.check-if-tag-exists.outputs.TARGET_TAG_EXISTS == 'false'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          tagging_message: '${{ steps.get-tag.outputs.TARGET_LATEST_TAG }}'
+          commit_message: '[auto] Update GoGoLoco to version ${{ steps.get-tag.outputs.TARGET_LATEST_TAG }}'
