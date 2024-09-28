@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: GoMenuEmoteExtra49_96
+  m_EditorClassIdentifier: 
+  controls:
+  - name: <b><size=36><line-height=100%><voffset=5em>49 - 56
+    icon: {fileID: 2800000, guid: 0b4191a7105ff614b862ec6feeffbbd2, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: f4e287fa54128c640a904dd2e846c098, type: 2}
+    subParameters: []
+    labels: []
+  - name: <b><size=36><line-height=100%><voffset=5em>57 - 64
+    icon: {fileID: 2800000, guid: 0b4191a7105ff614b862ec6feeffbbd2, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: d60c41120bc783d45b07169d66ed8fce, type: 2}
+    subParameters: []
+    labels: []
+  - name: <b><size=36><line-height=100%><voffset=5em>65 - 72
+    icon: {fileID: 2800000, guid: 0b4191a7105ff614b862ec6feeffbbd2, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: c9cc11cbf3978e141ab2771e4963395e, type: 2}
+    subParameters: []
+    labels: []
+  - name: <b><size=36><line-height=100%><voffset=5em>73 - 80
+    icon: {fileID: 2800000, guid: 0b4191a7105ff614b862ec6feeffbbd2, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 40aeb8500cb88114d8ab23094fdeee08, type: 2}
+    subParameters: []
+    labels: []
+  - name: <b><size=36><line-height=100%><voffset=5em>81 - 88
+    icon: {fileID: 2800000, guid: 0b4191a7105ff614b862ec6feeffbbd2, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: b89ed94de4cc04445b39b604106e6f0d, type: 2}
+    subParameters: []
+    labels: []
+  - name: <b><size=36><line-height=100%><voffset=5em>89 - 96
+    icon: {fileID: 2800000, guid: 0b4191a7105ff614b862ec6feeffbbd2, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 45632d054d0b73c4aa538f62149c88db, type: 2}
+    subParameters: []
+    labels: []

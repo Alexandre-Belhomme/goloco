@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: GoMenuPoseLaydown+
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
+  controls:
+  - name: <b>
+    icon: {fileID: 2800000, guid: 9ba79281b8605e346827315b3ad406cb, type: 3}
+    type: 101
+    parameter:
+      name: VRCEmote
+    value: 255
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: 77c669b0a911f9947b8af657c99bb3af, type: 3}
+    type: 203
+    parameter:
+      name: VRCEmote
+    value: 236
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: Go/PoseRadial
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: 3104d316f260ede41a71bc1c002e5115, type: 3}
+    type: 203
+    parameter:
+      name: VRCEmote
+    value: 237
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: Go/PoseRadial
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: c36cff1babee709419783761ff3d20dd, type: 3}
+    type: 203
+    parameter:
+      name: VRCEmote
+    value: 234
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: Go/PoseRadial
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: 64b712c600c06ce41a8f8a16c30b4046, type: 3}
+    type: 203
+    parameter:
+      name: VRCEmote
+    value: 239
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: Go/PoseRadial
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: 83e21a5dc92110f43a33d060277dadae, type: 3}
+    type: 101
+    parameter:
+      name: VRCEmote
+    value: 235
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: ceba2f3a07b3b2a41ba5d1e496fa5be5, type: 3}
+    type: 203
+    parameter:
+      name: VRCEmote
+    value: 125
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: Go/Float
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: acd93fff024c649408e9f21737626b70, type: 3}
+    type: 102
+    parameter:
+      name: Go/Stationary
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

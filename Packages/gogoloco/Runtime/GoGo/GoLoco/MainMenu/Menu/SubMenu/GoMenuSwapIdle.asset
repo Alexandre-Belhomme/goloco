@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: GoMenuSwapIdle
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 11400000, guid: 6ce7211da2038b64a99f63a070b15b30, type: 2}
+  controls:
+  - name: <b>
+    icon: {fileID: 2800000, guid: 16e11dcded7de5c4fb0f365271ca543d, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: e7f05cbfb4f3b6d4f92236afd97a1116, type: 2}
+    subParameters: []
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: 65e831e88cf89b94d9088dffb9ef13e9, type: 3}
+    type: 103
+    parameter:
+      name: VRCEmote
+    value: 119
+    style: 0
+    subMenu: {fileID: 11400000, guid: 77f319b96084b5b439beba6cec33b001, type: 2}
+    subParameters: []
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: 9d5a103a823c4c449a844720be6139f5, type: 3}
+    type: 103
+    parameter:
+      name: VRCEmote
+    value: 119
+    style: 0
+    subMenu: {fileID: 11400000, guid: 9485f3d1d6d4bff4ab57e963fb3b177c, type: 2}
+    subParameters: []
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: d17ccb8b58e52b44ebca1c481400cee1, type: 3}
+    type: 101
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: 0431a8dd37244454cbf0d7295e5958cf, type: 3}
+    type: 102
+    parameter:
+      name: Go/ProneIdleMirror
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: c37461bcf9142f049ad6a46c4b37160a, type: 3}
+    type: 102
+    parameter:
+      name: Go/CrouchIdleMirror
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: d3ded104301318544a7b22cbba98ff51, type: 3}
+    type: 102
+    parameter:
+      name: Go/StandIdleMirror
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

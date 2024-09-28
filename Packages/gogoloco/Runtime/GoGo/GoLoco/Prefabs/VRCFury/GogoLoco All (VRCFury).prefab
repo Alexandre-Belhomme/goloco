@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1227330909385755638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1227330909385755637}
+  - component: {fileID: -1012614459081793824}
+  m_Layer: 0
+  m_Name: GogoLoco All (VRCFury)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1227330909385755637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227330909385755638}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1012614459081793824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227330909385755638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e94e501a2d4c95bff3d5601013d923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  unityVersion: 2022.3.22f1
+  vrcfuryVersion: 1.1071.0
+  somethingIsBroken: 0
+  config:
+    features: []
+  content:
+    rid: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 0
+      type: {class: FullController, ns: VF.Model.Feature, asm: VRCFury}
+      data:
+        version: 4
+        controllers:
+        - controller:
+            version: 1
+            fileID: 9100000
+            guid: f1623b6009ca6ec4db1cce53f02f3bf5
+            id: 3fe95311f8402e147bd99d7fa91e2d7c|Assets/GoGo/GoLoco/ControllersWD/GoLocoBaseWD.controller
+            objRef: {fileID: 9100000, guid: 3fe95311f8402e147bd99d7fa91e2d7c, type: 2}
+          type: 0
+        - controller:
+            version: 1
+            fileID: 9100000
+            guid: 93434d13e07b90045841ae5b6b98aaaf
+            id: f094f2181f4e52b478200609d93196ae|Assets/GoGo/GoLoco/ControllersWD/GoLocoActionWD.controller
+            objRef: {fileID: 9100000, guid: f094f2181f4e52b478200609d93196ae, type: 2}
+          type: 4
+        - controller:
+            version: 1
+            fileID: 9100000
+            guid: 4d3257c455716f848b472f8c98b22fd0
+            id: 4d3257c455716f848b472f8c98b22fd0|Assets/GoGo/GoLoco/ControllersWD/GoLocoSittingWD.controller
+            objRef: {fileID: 9100000, guid: 4d3257c455716f848b472f8c98b22fd0, type: 2}
+          type: 6
+        menus:
+        - menu:
+            version: 1
+            fileID: 11400000
+            guid: f4e2cc2fe47562c4a9ef6ff386d9b9cf
+            id: f4e2cc2fe47562c4a9ef6ff386d9b9cf|Assets/GoGo/GoLoco/MainMenu/GoAllMainMenu.asset
+            objRef: {fileID: 11400000, guid: f4e2cc2fe47562c4a9ef6ff386d9b9cf, type: 2}
+          prefix: 
+        prms:
+        - parameters:
+            version: 1
+            fileID: 11400000
+            guid: 839214bfcc622254eba684fa5faa1d12
+            id: 6ce7211da2038b64a99f63a070b15b30|Assets/GoGo/GoLoco/MainMenu/GoAllParameters.asset
+            objRef: {fileID: 11400000, guid: 6ce7211da2038b64a99f63a070b15b30, type: 2}
+        smoothedPrms: []
+        globalParams:
+        - a *
+        allNonsyncedAreGlobal: 0
+        ignoreSaved: 0
+        toggleParam: 
+        rootObjOverride: {fileID: 0}
+        rootBindingsApplyToAvatar: 1
+        rewriteBindings: []
+        allowMissingAssets: 0
+        injectSpsDepthParam: 
+        controller:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        menu:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        parameters:
+          version: 1
+          fileID: 0
+          guid: 
+          id: 
+          objRef: {fileID: 0}
+        submenu: 
+        removePrefixes: []
+        addPrefix: 
+        useSecurityForToggle: 0

@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: GoMenuEmotes
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 11400000, guid: 6ce7211da2038b64a99f63a070b15b30, type: 2}
+  controls:
+  - name: <b>Standing
+    icon: {fileID: 2800000, guid: 1a77a0f1648c2a24ea5fce984325606f, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: e37e74109382f8b41a656a6cf2042ffa, type: 2}
+    subParameters: []
+    labels: []
+  - name: <b>Seated
+    icon: {fileID: 2800000, guid: 65e831e88cf89b94d9088dffb9ef13e9, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 11
+    style: 0
+    subMenu: {fileID: 11400000, guid: 10b88ec96957b7c4699f8945bd7ae3f8, type: 2}
+    subParameters: []
+    labels: []
+  - name: <b>T Spin
+    icon: {fileID: 2800000, guid: d3ded104301318544a7b22cbba98ff51, type: 3}
+    type: 203
+    parameter:
+      name: VRCEmote
+    value: 18
+    style: 0
+    subMenu: {fileID: 11400000, guid: af57df8f0eabbdc4986c4a803285150d, type: 2}
+    subParameters:
+    - name: Go/Float
+    labels: []
+  - name: <b>T Pose
+    icon: {fileID: 2800000, guid: 16e11dcded7de5c4fb0f365271ca543d, type: 3}
+    type: 102
+    parameter:
+      name: VRCEmote
+    value: 17
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: <b>Knockback
+    icon: {fileID: 2800000, guid: 1fa53c971aacb6743b1c8ef1c6aa61dc, type: 3}
+    type: 102
+    parameter:
+      name: VRCEmote
+    value: 19
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

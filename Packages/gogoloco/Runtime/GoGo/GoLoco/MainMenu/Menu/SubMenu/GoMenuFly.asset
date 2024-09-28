@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: GoMenuFly
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 11400000, guid: 086135956afd76442bad49178cec25e5, type: 2}
+  controls:
+  - name: <b>Station
+    icon: {fileID: 2800000, guid: f2d4c382e83ab2949a14034b72e4de0d, type: 3}
+    type: 102
+    parameter:
+      name: Go/Station/Chair
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: d4843e83c5b377b40b5a4ce943a86227, type: 3}
+    type: 102
+    parameter:
+      name: VRCEmote
+    value: 123
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: <b>Angle
+    icon: {fileID: 2800000, guid: 030661acabf3b69479689ce33f264cf9, type: 3}
+    type: 201
+    parameter:
+      name: VRCEmote
+    value: 121
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: 
+    - name: Go/Float
+    labels:
+    - name: 
+      icon: {fileID: 2800000, guid: dd5a7e4ba5dd14e488bc338aa572df8d, type: 3}
+    - name: 
+      icon: {fileID: 2800000, guid: 0b4191a7105ff614b862ec6feeffbbd2, type: 3}
+    - name: 
+      icon: {fileID: 2800000, guid: 6e914a2a89b7944448cf6977578a2ac5, type: 3}
+    - name: 
+      icon: {fileID: 2800000, guid: 0b4191a7105ff614b862ec6feeffbbd2, type: 3}
+  - name: <b>Speed
+    icon: {fileID: 2800000, guid: 7a1ba500dbd76cb49a3e2e694e69e53e, type: 3}
+    type: 203
+    parameter:
+      name: VRCEmote
+    value: 122
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: Go/Float
+    labels: []
+  - name: <b>Drop
+    icon: {fileID: 2800000, guid: 6e914a2a89b7944448cf6977578a2ac5, type: 3}
+    type: 101
+    parameter:
+      name: VRCEmote
+    value: 120
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: <b>
+    icon: {fileID: 2800000, guid: 56044108ec6aecd478a0e390fceb8b03, type: 3}
+    type: 102
+    parameter:
+      name: VRCEmote
+    value: 124
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: <b>Dash
+    icon: {fileID: 2800000, guid: a2cd44f55f4e62a46a61d8aa8193eb57, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 2c8f7da40c5db1f4fbf4ec11fbc73051, type: 2}
+    subParameters: []
+    labels: []
