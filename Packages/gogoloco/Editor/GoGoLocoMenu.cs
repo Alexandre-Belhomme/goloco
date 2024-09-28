@@ -50,8 +50,12 @@ public class GoGoLocoMenu : EditorWindow
     */
     private void OnGUI()
     {
+        GUILayout.BeginHorizontal();
         // GoGoLoco Logo
         GUILayout.Label(headerImage, GUILayout.ExpandWidth(true), GUILayout.MaxHeight(headerImage.height));
+        // GoGoLoco Title
+        GUILayout.Label("GoGoLoco", GUILayout.ExpandWidth(true), GUILayout.MaxHeight(headerImage.height));
+        GUILayout.EndHorizontal();
 
         // Help Box
         GUILayout.Label("Select your avatar in the hierarchy");
@@ -79,27 +83,39 @@ public class GoGoLocoMenu : EditorWindow
 
         // Disable buttons if wrong avatar selected
         GUI.enabled = errorLabel == "";
-        
-        if (GUILayout.Button("Add GoGoLoco All (VRCFury) Prefab"))
+
+        GUILayout.BeginHorizontal();
+
+        GUILayout.BeginVertical();
+        GUILayout.Label("VRCFury Prefabs");
+        if (GUILayout.Button("Add GoGoLoco All"))
         {
+            //childObject.transform.IsChildOf(parentObject.transform)
             GameObject instantiatedPrefab = PrefabUtility.InstantiatePrefab(gogolocoAllVRCFuryPrefab) as GameObject;
             instantiatedPrefab.transform.SetParent(avatarTarget.transform);
         }
-        if (GUILayout.Button("Add GoGoLoco Beyond (VRCFury) Prefab"))
+        if (GUILayout.Button("Add GoGoLoco Beyond"))
         {
             GameObject instantiatedPrefab = PrefabUtility.InstantiatePrefab(gogolocoBeyondVRCFuryPrefab) as GameObject;
             instantiatedPrefab.transform.SetParent(avatarTarget.transform);
         }
-        if (GUILayout.Button("Add GoGoLoco All (Modular Avatar) Prefab"))
+        GUILayout.EndVertical();
+
+        GUILayout.BeginVertical();
+        GUILayout.Label("Modular Avatar Prefabs");
+        if (GUILayout.Button("Add GoGoLoco All"))
         {
             GameObject instantiatedPrefab = PrefabUtility.InstantiatePrefab(gogolocoAllMAPrefab) as GameObject;
             instantiatedPrefab.transform.SetParent(avatarTarget.transform);
         }
-        if (GUILayout.Button("Add GoGoLoco Beyond (Modular Avatar) Prefab"))
+        if (GUILayout.Button("Add GoGoLoco Beyond"))
         {
             GameObject instantiatedPrefab = PrefabUtility.InstantiatePrefab(gogolocoBeyondMAPrefab) as GameObject;
             instantiatedPrefab.transform.SetParent(avatarTarget.transform);
         }
+        GUILayout.EndVertical();
+
+        GUILayout.EndHorizontal();
         GUI.enabled = true;
     }
 }
