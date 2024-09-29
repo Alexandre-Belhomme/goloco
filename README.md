@@ -11,4 +11,4 @@ Click [here](https://spokeek.github.io/goloco) for the listing.
 
 The VPM Package follows the main GoGoLoco Versioning.
 
-linktr.ee/franada
+<https://linktr.ee/franada>
